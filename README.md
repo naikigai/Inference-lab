@@ -25,3 +25,22 @@ Nice to have
 - Networking: VLANs, BGP
 - GPU stack: NCCL, CUDA, InfiniBand/RoCE
 - Systems programming in Rust or Go
+
+
+# Let's build GPT: from scratch, in code, spelled out
+- https://www.youtube.com/watch?v=kCc8FmEb1nY
+- It all started with paper 'Attention is all you need' - https://arxiv.org/abs/1706.03762
+- https://huggingface.co/datasets/karpathy/tiny_shakespeare - we are going to build a transformer model that will be trained on shakespeare work
+- https://github.com/karpathy/nanogpt - So code for training transformers is here .
+- ok there are two file , train.py and model.py - about 300 lines each , which we will use to create a transformer almost as good as gpt 2
+- we first read all the text into a string
+- then we see how many diff chars are there
+- total 65 were there
+- then we take those 65 map each char to the integer(in our case, it was mapped to index) , then we have this encoding and decoding which does char to int and vice versa
+- In practice however , diff algo are use for this purpose
+- For example, SentencePiece by google - https://github.com/google/sentencepiece and tiktoken  - https://github.com/openai/tiktoken
+- tiktoken is by openAI. GPT uses it.
+- we never feed entire text to transformer all at once , that would be too heavy , instead we train it on chunks
+- Chunk_size or block_size or context_size - you will see diff names for this vaiable.
+- block_size is what we'll use
+- 
