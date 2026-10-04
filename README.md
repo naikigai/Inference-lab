@@ -43,4 +43,6 @@ Nice to have
 - we never feed entire text to transformer all at once , that would be too heavy , instead we train it on chunks
 - Chunk_size or block_size or context_size - you will see diff names for this vaiable.
 - block_size is what we'll use
+- ### Learning - Always check what input you are giving, for example , i gave wrong link for input file and continued deep only to realize later
+- 
 - 
